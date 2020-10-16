@@ -22,8 +22,8 @@ export class EmpManageComponent {
   }
 
   getEmpList(){
-    this.tablecheck=true;
-    this.listcheck=false;
+    this.tablecheck=false;
+    this.listcheck=true;
     return this.model.emp;
   }
 
