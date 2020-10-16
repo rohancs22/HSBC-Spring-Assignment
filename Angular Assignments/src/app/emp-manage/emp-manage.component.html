@@ -1,0 +1,25 @@
+<input type="button" value="Display Table" (click)="getAllEmp()">
+<input type="button" value="Display List" (click)="getEmpList()" >
+<input type="button" value="Clear All" (click)="clearData()" >
+
+<div *ngIf="listcheck">
+    <li *ngFor="let e of getEmpList() ">
+        <ul>{{ e.empno }}-->{{ e.ename }}-->{{ e.salary }}-->{{ e.desig }}-->{{ e.sal*0.1 }}-->{{ e.sal*1.1 }}
+        </ul>
+    </li>
+</div>
+
+<div *ngIf="tablecheck">
+<table border="1">
+    <tr><th>Empno</th><th>Ename</th><th>Salary</th><th>Designation</th><th>Bonus</th><th>Total</th></tr>
+    <tr *ngFor="let e of getAllEmp(); let i = index">
+        <td>{{ e.empno }}</td>
+        <td>{{ e.ename }}</td>
+        <td>{{ e.salary }}</td>
+        <td>{{ e.desig }}</td>
+        <td>{{ e.salary*0.1 }}</td>
+        <td>{{ e.salary*1.1 }}</td>
+    </tr>
+</table>
+</div>
+

@@ -1,0 +1,8 @@
+<table border="1">
+    <tr><th>Name</th><th>Age</th><th>Gender</th></tr>
+    <tr *ngFor="let p of people; let i = index">
+        <td>{{ p.name }}</td>
+        <td>{{ p.age }}</td>
+        <td>{{ p.gender }}</td>
+    </tr>
+</table>
